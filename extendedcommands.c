@@ -1329,13 +1329,13 @@ void show_advanced_menu()
                             NULL
     };
 
-    if (!can_partition("/sdcard")) {
+    if (!can_partition("/sdcardx")) {
         list[6] = NULL;
     }
-    if (!can_partition("/external_sd")) {
+    if (!can_partition("/external_sdx")) {
         list[7] = NULL;
     }
-    if (!can_partition("/emmc")) {
+    if (!can_partition("/emmcx")) {
         list[8] = NULL;
     }
 

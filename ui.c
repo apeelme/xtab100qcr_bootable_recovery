@@ -768,6 +768,7 @@ int ui_start_menu(char** headers, char** items, int initial_selection) {
         show_menu = 1;
         menu_sel = menu_show_start = initial_selection;
         update_screen_locked();
+        update_screen_locked();
     }
     pthread_mutex_unlock(&gUpdateMutex);
     if (gShowBackButton && !ui_root_menu) {
@@ -798,6 +799,7 @@ int ui_menu_select(int sel) {
         sel = menu_sel;
 
         if (menu_sel != old_sel) update_screen_locked();
+        update_screen_locked();
     }
     pthread_mutex_unlock(&gUpdateMutex);
     return sel;
